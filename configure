@@ -1,0 +1,17 @@
+./configure --prefix=/opt/server/webserver/nginx/ \
+            --sbin-path=/opt/server/webserver/nginx/bin/nginx \
+	    --user=nginx \
+	    --group=nginx \
+	    --with-http_ssl_module \
+	    --with-http_flv_module \
+	    --with-http_gzip_static_module \
+	    --with-http_stub_status_module \
+	    --http-client-body-temp-path=/opt/server/webserver/nginx/temp/client \
+	    --http-proxy-temp-path=/opt/server/webserver/nginx/temp/proxy \
+	    --http-fastcgi-temp-path=/opt/server/webserver/nginx/temp/fastcgi \
+	    --http-uwsgi-temp-path=/opt/server/webserver/nginx/temp/uwsgi \
+	    --http-scgi-temp-path=/opt/server/webserver/nginx/temp/scgi \
+	    --with-mail \
+	    --with-mail_ssl_module \
+	    --with-debug \
+	    --add-module=/opt/tools/nginx-upstream-dynamic-servers
